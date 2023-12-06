@@ -1,6 +1,5 @@
 import avatar from "public/images/avatar.png";
 import Image from "next/image";
-import ContactLink from "../components/ui/AboutLink";
 import NextLink from "next/link";
 import ExperienceItem from "../components/ui/ExperienceItem";
 import { workData } from "../content/workData";

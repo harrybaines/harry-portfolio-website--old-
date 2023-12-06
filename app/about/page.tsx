@@ -10,9 +10,19 @@ import { workData } from "../../content/workData";
 export default function AboutPage() {
   return (
     <div>
-      <PageHeading title="About Me" />
+      {/* <PageHeading title="About Me" /> */}
+      <p className="text-4xl font-bold mb-4 animate-from-bottom">
+        Hi, I'm Harry 👋
+      </p>
       <p
-        className="my-6 text-lg animate-from-bottom dark:text-gray-300"
+        className="text-2xl font-semibold animate-from-bottom"
+        style={{ "--index": 1 } as React.CSSProperties}
+      >
+        I write <span className="text-orange-400">code</span> and build{" "}
+        <span className="text-blue-400">apps</span>.
+      </p>
+      {/* <p
+        className="text-lg animate-from-bottom dark:text-gray-300"
         style={{ "--index": 1 } as React.CSSProperties}
       >
         Hi! 👋 I'm Harry. I'm a full-stack software engineer with 5+ years of
@@ -25,7 +35,7 @@ export default function AboutPage() {
           large architecture firm
         </a>
         .
-      </p>
+      </p> */}
       <section className="flex gap-8 my-10">
         <div
           className="animate-from-bottom"
@@ -58,11 +68,19 @@ export default function AboutPage() {
           />
         </div>
       </section>
+      <section className="my-10">
+        <h2 className="text-xl font-semibold my-4">About Me</h2>
+        <ul>
+          <li>5+ years experience as a Full-Stack Software Engineer</li>
+          <li>2 years experience as a Data Scientist</li>
+        </ul>
+        <p>Download CV</p>
+      </section>
       <section
         className="animate-from-bottom my-16"
         style={{ "--index": 4 } as React.CSSProperties}
       >
-        <h2 className="text-xl font-semibold my-6">Experience</h2>
+        <h2 className="text-xl font-semibold my-4">Experience</h2>
         <div className="grid grid-cols-4 gap-y-10">
           {workData.map((job) => (
             <ExperienceItem key={job.id} minimal={false} job={job} />
