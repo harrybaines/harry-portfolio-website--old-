@@ -12,10 +12,10 @@ interface AboutImageProps {
 export default function AboutImage({ src, alt, caption }: AboutImageProps) {
   return (
     <motion.div
-      whileHover={{ scale: 1.1 }}
+      whileHover={{ scale: 1.15 }}
       transition={{ type: "spring", stiffness: 300, damping: 25 }}
     >
-      <div className="flex flex-col w-[200px] h-[300px]">
+      <div className="flex flex-col w-[200px] h-[275px]">
         <Image
           {...{
             src,
@@ -25,7 +25,9 @@ export default function AboutImage({ src, alt, caption }: AboutImageProps) {
           priority
         />
       </div>
-      <p className="mt-3 text-gray-300 text-sm text-center">{caption}</p>
+      <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm text-center">
+        {caption}
+      </p>
     </motion.div>
   );
 }

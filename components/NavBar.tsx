@@ -12,7 +12,7 @@ const links = [
 export default function Header() {
   return (
     <header className="max-w-[700px] mx-auto bg-background">
-      <nav className="flex justify-between items-center gap-3 px-4 md:px-6 py-3">
+      <nav className="flex justify-between py-3 px-2">
         <ul className="flex">
           {links.map((link) => (
             <li

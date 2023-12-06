@@ -1,9 +1,11 @@
 import avatar from "public/images/avatar.png";
 import Image from "next/image";
-import ContactLink from "../components/ui/ContactLink";
+import ContactLink from "../components/ui/AboutLink";
 import NextLink from "next/link";
 import ExperienceItem from "../components/ui/ExperienceItem";
 import { workData } from "../content/workData";
+import { aboutLinks } from "../content/aboutLinks";
+import AboutLink from "../components/ui/AboutLink";
 
 export default function HomePage() {
   return (
@@ -19,7 +21,7 @@ export default function HomePage() {
           />
           <div>
             <p
-              className="text-gray-400 mb-1 animate-from-bottom"
+              className="text-gray-600 dark:text-gray-300 mb-1 animate-from-bottom"
               style={{ "--index": 1 } as React.CSSProperties}
             >
               Hi! 👋 My name is
@@ -27,7 +29,7 @@ export default function HomePage() {
             <h1 className="text-3xl mb-1.5 font-bold animate-from-bottom">
               Harry Baines
             </h1>
-            <p className="text-gray-400 text-lg animate-from-bottom">
+            <p className="text-gray-600 dark:text-gray-400 text-lg animate-from-bottom">
               Full-stack software engineer 🚀
             </p>
           </div>
@@ -37,7 +39,10 @@ export default function HomePage() {
             Experienced software engineer with experience in web dev, data
             science, AI and blockchains. Currently building a project management
             system for a large architecture firm.
-            <NextLink href="/about" className="text-gray-400 underline ml-2">
+            <NextLink
+              href="/about"
+              className=" text-gray-600 dark:text-gray-400 underline ml-2"
+            >
               Read more
             </NextLink>
           </p>
@@ -45,22 +50,9 @@ export default function HomePage() {
             className="flex flex-row gap-3 animate-from-bottom"
             style={{ "--index": 3 } as React.CSSProperties}
           >
-            <ContactLink
-              title="Email"
-              link="mailto:harryb0905@googlemail.com"
-            />
-            <ContactLink
-              title="GitHub"
-              link="mailto:harryb0905@googlemail.com"
-            />
-            <ContactLink
-              title="Twitter"
-              link="mailto:harryb0905@googlemail.com"
-            />
-            <ContactLink
-              title="LinkedIn"
-              link="mailto:harryb0905@googlemail.com"
-            />
+            {aboutLinks.map((link) => (
+              <AboutLink key={link.href} {...link} />
+            ))}
           </div>
         </div>
       </section>

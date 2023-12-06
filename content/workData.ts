@@ -3,6 +3,7 @@ import YordasLogo from "../public/images/yordas.svg";
 
 export const workData = [
   {
+    id: 1,
     date: "2022 - Present",
     title: "Full Stack Software Engineer",
     companyName: "Cassidy and Ashton",
@@ -24,6 +25,7 @@ export const workData = [
       "Implemented a full-stack timesheet, project and leave management system using modern technologies. Supports clients, staff and project dashboards, and fee forecasting. Used by ~60 employees on a daily basis.",
   },
   {
+    id: 2,
     date: "2020 - 2022",
     title: "Software Engineer / Data Scientist",
     companyName: "Yordas Digital",
@@ -43,6 +45,7 @@ export const workData = [
       "Implemented a full-stack SDS authoring app in Django, supervised two student internship projects, developed developer template repos and automation scripts, and deployed ML-based time series forecasting models.",
   },
   {
+    id: 3,
     date: "2020",
     title: "Data Scientist Internship",
     companyName: "Yordas Digital",
