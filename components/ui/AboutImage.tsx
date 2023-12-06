@@ -1,0 +1,31 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
+
+interface AboutImageProps {
+  src: StaticImageData | string;
+  alt: string;
+  caption: string;
+}
+
+export default function AboutImage({ src, alt, caption }: AboutImageProps) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.1 }}
+      transition={{ type: "spring", stiffness: 300, damping: 25 }}
+    >
+      <div className="flex flex-col w-[200px] h-[300px]">
+        <Image
+          {...{
+            src,
+            alt,
+          }}
+          className="w-full h-full object-cover shadow-lg pointer-events-none rounded-2xl"
+          priority
+        />
+      </div>
+      <p className="mt-3 text-gray-300 text-sm text-center">{caption}</p>
+    </motion.div>
+  );
+}
