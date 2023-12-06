@@ -2,36 +2,8 @@ import avatar from "public/images/avatar.png";
 import Image from "next/image";
 import ContactLink from "../components/ui/ContactLink";
 import NextLink from "next/link";
-import WorkItem from "../components/ui/WorkItem";
-
-const workData = [
-  {
-    date: "2018 - Present",
-    title: "Full Stack Software Engineer",
-    companyName: "Cassidy and Ashton",
-    companyURL: "https://cassidyashton.co.uk",
-    skills: [
-      "React",
-      "RTK",
-      "TypeScript",
-      "Express",
-      "Postgres",
-      "Prisma",
-      "Supabase",
-    ],
-    description:
-      "Designed and developed a modern full-stack timesheet and project management system from scratch. Used by ~60 employees on a daily basis.",
-  },
-  {
-    date: "2020 - 2022",
-    title: "Data Scientist / Software Engineer",
-    companyName: "Yordas Digital",
-    companyURL: "https://www.yordasgroup.com/",
-    skills: ["Python", "Django", "Docker", "Flask", "Selenium"],
-    description:
-      "Developed and maintained web applications using React and Node.js",
-  },
-];
+import ExperienceItem from "../components/ui/ExperienceItem";
+import { workData } from "../content/workData";
 
 export default function HomePage() {
   return (
@@ -61,10 +33,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="flex flex-col gap-10 animate-from-bottom">
-          <p
-            className="text-lg"
-            style={{ "--index": 2 } as React.CSSProperties}
-          >
+          <p style={{ "--index": 2 } as React.CSSProperties}>
             Experienced software engineer with experience in web dev, data
             science, AI and blockchains. Currently building a project management
             system for a large architecture firm.
@@ -99,10 +68,10 @@ export default function HomePage() {
         className="animate-from-bottom"
         style={{ "--index": 4 } as React.CSSProperties}
       >
-        <h2 className="text-2xl font-bold mb-10">Work</h2>
-        <div className="grid grid-cols-4 gap-y-8">
-          {workData.map((job, index) => (
-            <WorkItem key={index} job={job} />
+        <h2 className="text-2xl font-bold mb-10">Experience</h2>
+        <div className="grid grid-cols-10 gap-y-8 gap-x-4">
+          {workData.map((job) => (
+            <ExperienceItem key={job.date} minimal job={job} />
           ))}
         </div>
       </section>

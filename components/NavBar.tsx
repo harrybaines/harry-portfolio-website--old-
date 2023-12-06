@@ -1,13 +1,11 @@
 "use client";
 
-import Link from "next/link";
 import NavLink from "./ui/NavLink";
 import ThemeToggleButton from "./ui/ThemeToggleButton";
 
 const links = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog" },
   { label: "Projects", href: "/projects" },
 ];
 
@@ -21,7 +19,7 @@ export default function Header() {
               key={link.href}
               className="relative after:content-['/'] after:absolute after:inset-y-0 after:right-[-3px] after:text-gray-500 last:after:content-['']"
             >
-              <NavLink href={link.href}>{link.label.toUpperCase()}</NavLink>
+              <NavLink href={link.href}>{link.label}</NavLink>
             </li>
           ))}
         </ul>
