@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <div>
       <p className="text-4xl font-bold mb-4 animate-from-bottom">
-        Hi, I'm Harry 👋
+        Hi, I&apos;m Harry 👋
       </p>
       <p
         className="text-2xl animate-from-bottom"
@@ -66,23 +66,23 @@ export default function AboutPage() {
           </li>
           <li>
             Experienced with building full-stack software applications,
-            automation scripts, API's and machine learning models.
+            automation scripts, API&apos;s and machine learning models.
           </li>
           <li>
             In my 2nd year of university I created and sold a full-stack
             timesheet application to a large architecture firm, which is used by
-            60+ employees on a daily basis. I'm currently building a second
+            60+ employees on a daily basis. I&apos;m currently building a second
             version of the system to utilise a more modern tech stack.
           </li>
           <li>
-            I'm also passionate about leveraging AI/ML to build innovative
-            solutions. Recently, I've been spending time investigating large
-            language models.
+            I&apos;m also passionate about leveraging AI/ML to build innovative
+            solutions. Recently, I&apos;ve been spending time investigating
+            large language models.
           </li>
           <li>I like keeping up-to-date with the latest developments in AI.</li>
           <li>
-            I'm a lifelong learner looking for opportunities to grow and improve
-            my skills.
+            I&apos;m a lifelong learner looking for opportunities to grow and
+            improve my skills.
           </li>
         </ul>
         <p className="mt-6">

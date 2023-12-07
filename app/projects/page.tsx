@@ -13,7 +13,7 @@ export default function ProjectsPage() {
           style={{ "--index": 1 } as React.CSSProperties}
         >
           <p className="mt-6">
-            Here are some of the key projects I've worked on.
+            Here are some of the key projects I&apos;ve worked on.
           </p>
           <div className="mt-8 mb-16">
             {allProjects
@@ -28,7 +28,7 @@ export default function ProjectsPage() {
           className=" animate-from-bottom"
           style={{ "--index": 2 } as React.CSSProperties}
         >
-          <p>And a few others I'm also proud of:</p>
+          <p>And a few others I&apos;m also proud of:</p>
           <div className="grid grid-cols-2 mt-8 animate-from-bottom">
             {allProjects
               .sort((a, b) =>
