@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "next",
-    "build": "node ./scripts/gen-rss.js && next build",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -19,12 +19,9 @@
     "next": "latest",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
-    "nextra": "^2.0.0-beta.5",
-    "nextra-theme-blog": "^2.0.0-beta.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
-    "rss": "^1.2.2",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
   },

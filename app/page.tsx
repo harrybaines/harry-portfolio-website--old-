@@ -7,7 +7,6 @@ import { aboutLinks } from "../content/aboutLinks";
 import CustomLink from "../components/ui/CustomLink";
 import ProjectCard from "components/ui/ProjectCard";
 import { allProjects } from "contentlayer/generated";
-import { compareDesc } from "date-fns";
 
 export default function HomePage() {
   const projects = allProjects
@@ -42,9 +41,9 @@ export default function HomePage() {
         </div>
         <div className="flex flex-col gap-10 animate-from-bottom">
           <p style={{ "--index": 2 } as React.CSSProperties}>
-            Experienced software engineer with experience in web dev, data
-            science, AI and blockchains. Currently building a project management
-            system for a large architecture firm.
+            Software engineer with experience in web dev, data science, AI and
+            blockchains. Currently building a project management system for a
+            large architecture firm.
             <NextLink
               href="/about"
               className=" text-gray-600 dark:text-gray-400 underline ml-2"
@@ -72,7 +71,7 @@ export default function HomePage() {
             <ProjectCard key={idx} {...project} />
           ))}
         </div>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 text-sm">
           <CustomLink
             key={"view-all-projects-link"}
             label="View All"

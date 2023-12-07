@@ -28,7 +28,7 @@ export default function ThemeToggleButton() {
       defaultValue={resolvedTheme}
       onValueChange={(theme) => setTheme(theme)}
     >
-      <SelectTrigger className="w-[180px] border-none">
+      <SelectTrigger className="w-10 border-none">
         <SelectValue aria-label={resolvedTheme}>
           {["dark", "system"].includes(resolvedTheme) ? (
             <Moon className={themeIconClassName} />

@@ -4,22 +4,41 @@ import { allProjects } from "contentlayer/generated";
 import ProjectCard from "components/ui/ProjectCard";
 
 export default function ProjectsPage() {
-  const projects = allProjects.sort((a, b) =>
-    compareDesc(new Date(a.startDate), new Date(b.startDate))
-  );
-
   return (
     <div>
       <PageHeading title="Projects" />
-      <section
-        className="text-lg animate-from-bottom"
-        style={{ "--index": 1 } as React.CSSProperties}
-      >
-        Here are some of the key projects I've worked on.
-        <div className="my-6">
-          {projects.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
-          ))}
+      <section className="text-lg">
+        <div
+          className="animate-from-bottom"
+          style={{ "--index": 1 } as React.CSSProperties}
+        >
+          <p className="mt-6">
+            Here are some of the key projects I've worked on.
+          </p>
+          <div className="mt-8 mb-16">
+            {allProjects
+              .filter((project) => project.highlight)
+              .sort((a, b) => a.order - b.order)
+              .map((project, idx) => (
+                <ProjectCard key={idx} {...project} />
+              ))}
+          </div>
+        </div>
+        <div
+          className=" animate-from-bottom"
+          style={{ "--index": 2 } as React.CSSProperties}
+        >
+          <p>And a few others I'm also proud of:</p>
+          <div className="grid grid-cols-2 mt-8 animate-from-bottom">
+            {allProjects
+              .sort((a, b) =>
+                compareDesc(new Date(a.startDate), new Date(b.startDate))
+              )
+              .filter((project) => !project.highlight)
+              .map((project, idx) => (
+                <ProjectCard key={idx} {...project} />
+              ))}
+          </div>
         </div>
       </section>
     </div>

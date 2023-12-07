@@ -5,7 +5,6 @@ export default function ExperienceItem({ job, minimal }) {
     return (
       <>
         <div className="col-span-1 flex items-center justify-center">
-          {" "}
           <Image
             src={job.companyLogo}
             alt="cassidy and ashton logo"
@@ -21,7 +20,7 @@ export default function ExperienceItem({ job, minimal }) {
           </div>
         </div>
         <div className="col-span-2 flex items-center justify-end">
-          <p className="text-gray-600 dark:text-gray-400 text-right">
+          <p className="text-sm text-gray-600 dark:text-gray-400 text-right">
             {job.date}
           </p>
         </div>

@@ -46,20 +46,17 @@ const ProjectLayout = ({ params }: { params: { slug: string } }) => {
         <h1 className="text-3xl font-bold mt-2">{project.title}</h1>
         <p className="text-xl mt-3 text-gray-400">{project.description}</p>
       </div>
-      {/* <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0 animate-from-bottom"
-        style={{ "--index": 1 } as React.CSSProperties}
-        dangerouslySetInnerHTML={{ __html: project.body.html }}
-      /> */}
       <div
         className="animate-from-bottom"
         style={{ "--index": 1 } as React.CSSProperties}
       >
         <MDXContent components={mdxComponents} />
+        <div className="mt-8">
+          <Link href="/projects" className="text-primary underline">
+            ← All Projects
+          </Link>
+        </div>
       </div>
-      <Link href="/projects" className="text-primary underline">
-        ← All Projects
-      </Link>
     </article>
   );
 };
