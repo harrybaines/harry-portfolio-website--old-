@@ -1,6 +1,6 @@
 import { IconType } from "react-icons";
 import { FaGithub, FaLinkedin, FaEnvelope, FaTwitter } from "react-icons/fa";
-import AboutLink from "../components/ui/AboutLink";
+import AboutLink from "../components/ui/CustomLink";
 
 export const aboutLinks = [
   {

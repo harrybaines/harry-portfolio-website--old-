@@ -11,7 +11,7 @@ export default function ProjectCard(project: Project) {
 
   return (
     <div className="flex gap-x-4 gap-y-10 mb-8 animate-from-bottom">
-      <div className="flex-none w-52 h-28 filter:text-black bg-gray-100 dark:bg-gray-800 rounded-md">
+      {/* <div className="flex-none w-52 h-28 filter:text-black bg-gray-100 dark:bg-gray-800 rounded-md">
         <div className="relative h-full w-full">
           <Image
             src={project.image}
@@ -22,7 +22,7 @@ export default function ProjectCard(project: Project) {
             objectFit="contain"
           />
         </div>
-      </div>
+      </div> */}
       <div>
         <h2 className="mb-1 text-lg hover:underline">
           <Link href={project.url}>{project.title}</Link>

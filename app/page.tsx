@@ -4,9 +4,16 @@ import NextLink from "next/link";
 import ExperienceItem from "../components/ui/ExperienceItem";
 import { workData } from "../content/workData";
 import { aboutLinks } from "../content/aboutLinks";
-import AboutLink from "../components/ui/AboutLink";
+import CustomLink from "../components/ui/CustomLink";
+import ProjectCard from "components/ui/ProjectCard";
+import { allProjects } from "contentlayer/generated";
+import { compareDesc } from "date-fns";
 
 export default function HomePage() {
+  const projects = allProjects
+    .filter((project) => project.highlight)
+    .sort((a, b) => a.order - b.order);
+
   return (
     <div className="flex flex-col gap-16 md:gap-20">
       <section className="flex flex-col gap-10">
@@ -50,7 +57,7 @@ export default function HomePage() {
             style={{ "--index": 3 } as React.CSSProperties}
           >
             {aboutLinks.map((link) => (
-              <AboutLink key={link.href} {...link} />
+              <CustomLink key={link.href} {...link} />
             ))}
           </div>
         </div>
@@ -59,7 +66,25 @@ export default function HomePage() {
         className="animate-from-bottom"
         style={{ "--index": 4 } as React.CSSProperties}
       >
-        <h2 className="text-2xl font-bold mb-10">Experience</h2>
+        <h2 className="text-2xl font-bold mb-8">Projects</h2>
+        <div>
+          {projects.map((project, idx) => (
+            <ProjectCard key={idx} {...project} />
+          ))}
+        </div>
+        <div className="flex justify-center mt-8">
+          <CustomLink
+            key={"view-all-projects-link"}
+            label="View All"
+            href="/projects"
+          />
+        </div>
+      </section>
+      <section
+        className="animate-from-bottom"
+        style={{ "--index": 5 } as React.CSSProperties}
+      >
+        <h2 className="text-2xl font-bold mb-8">Experience</h2>
         <div className="grid grid-cols-10 gap-y-8 gap-x-4">
           {workData.map((job) => (
             <ExperienceItem key={job.date} minimal job={job} />

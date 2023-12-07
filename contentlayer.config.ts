@@ -27,6 +27,8 @@ export const Project = defineDocumentType(() => ({
     endDate: { type: "date", required: false },
     description: { type: "string", required: true },
     projectType: { type: "string", required: true },
+    highlight: { type: "boolean", required: true },
+    order: { type: "number", required: true },
   },
   computedFields: projectComputedFields,
 }));
